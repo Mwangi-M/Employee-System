@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"  
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head> 
+        <title>Employee Registration Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <h:outputStylesheet name="/css/bootstrap.min.css"/> 
+    </h:head>
+    
+    <h:body>
+        <h:form id="form" class="form-horizontal">  
+            <div class="form-group">  
+                <div class="col-sm-4"></div>  
+                <div  class="col-sm-4">  
+                    <h2 style="text-align: center">To register a New Employee, please provide the following details:</h2>  
+                </div>  
+            </div>  
+            <hr/>
+
+            <div class="form-group">  
+                <h:outputLabel for="firstName" class="control-label col-sm-4">First Name</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="fname-id" value="#{user.firstName}" class="form-control" validatorMessage="First Name is required">  
+                        <f:validateRequired />  
+                    </h:inputText>  
+                </div>  
+            </div>
+            
+            <div class="form-group">  
+                <h:outputLabel for="lastName" class="control-label col-sm-4">Last Name</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="lname-id" value="#{user.lastName}" class="form-control" validatorMessage="Last Name is required">  
+                        <f:validateRequired />  
+                    </h:inputText>  
+                </div>  
+            </div>
+            
+            <div class="form-group">  
+                <h:outputLabel for="email" class="control-label col-sm-4">Email</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="email-id" value="#{user.email}" class="form-control" validatorMessage="Email is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div>
+            
+            <div class="form-group">  
+                <h:outputLabel for="phoneNumber" class="control-label col-sm-4">Phone No</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="phoneNo-id" value="#{user.phoneNumber}" class="form-control" validatorMessage="Phone No. is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div>
+            
+            <div class="form-group">  
+                <h:outputLabel for="hireDate" class="control-label col-sm-4">Hire Date</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="hireDate-id" value="#{user.hireDate}" class="form-control" validatorMessage="Hiring Date is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div>
+            
+            <div class="form-group">  
+                <h:outputLabel for="jobId" class="control-label col-sm-4">Job Id</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="jobId-id" value="#{user.jobId}" class="form-control" validatorMessage="Job Id is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div>
+            
+            <div class="form-group">  
+                <h:outputLabel for="salary" class="control-label col-sm-4">Salary</h:outputLabel>  
+                <div class="col-sm-4">  
+                    <h:inputText id="salary-id" value="#{user.salary}" class="form-control" validatorMessage="Salary is required">  
+                        <f:validateRequired/>  
+                    </h:inputText>  
+                </div>  
+            </div>
+            
+            <div class="form-group">  
+                <div class="col-sm-4"></div>  
+                <div class="col-sm-4">  
+                    <div class="col-sm-2">  
+                        <h:commandButton value="Save" action="#{user.save()}" class="btn btn-success" style="width: 80px;"></h:commandButton>  
+                    </div>  
+                    <div class="col-sm-1"></div>  
+                    <div class="col-sm-2">  
+                        <h:link outcome="welcomePrimefaces" value="View Employee List" class="btn btn-primary" />  
+                    </div>  
+                </div>  
+            </div>  
+        </h:form>
+    </h:body>
+</html>
